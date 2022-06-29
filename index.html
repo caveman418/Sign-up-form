@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="img-container">
@@ -18,7 +18,7 @@
     </div>
 
     <div class="right">
-        <div class="top">For the love of god PLEASE sign up. I am begging you! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti adipisci pariatur maxime obcaecati provident fuga excepturi molestias quae. Necessitatibus ex officia dolore molestias excepturi sunt commodi sequi repellendus cum quaerat.</div>
+        <div class="top">For the love of god PLEASE sign up. I am begging you! </div>
         <div class="middle">
             <div class="top-text">Sign up:</div>
             <form action="" method="post">
@@ -50,6 +50,7 @@
                 <div class="input confirm-password">
                     <label for="confirm-password">CONFIRM PASSWORD</label><br>
                     <input type="password" id="confirm-password" name="confirm-password" minlength=8 required>
+                    <div class="error">* Passwords do not match</div>
                 </div>
             </form>
         </div>

@@ -1,3 +1,9 @@
+:root {
+    --neutral: rgb(57, 102, 110);
+    --invalid: rgb(163, 83, 83);
+    --valid: rgb(83, 163, 90);
+}
+
 @font-face {
     font-family: 'staatliches';
     src: url(./fonts/Staatliches-Regular.ttf) format('truetype');
@@ -70,6 +76,7 @@ img {
     justify-content: center;
     gap: 5%;
     background-color: rgb(240, 235, 230);
+    width: 100%;
 }
 
 .top, .top-text {
@@ -103,19 +110,58 @@ form {
 input:focus {
     box-shadow: 3px 3px 3px rgb(150, 150, 150);
     border-radius: 3px;
-    outline: 1px solid rgb(129, 156, 192);
+    outline: 1px solid var(--neutral);
 }
 
 input {
     height: auto;
     width: 80%;
     margin-top: 2px;
-    border: 1px solid rgb(129, 156, 192);
+    border: 1px solid var(--neutral);
     padding: 10px 0 10px 15px;
     font-size: 1.5em;
 }
 
 input:invalid {
-    outline: 1px solid rgb(250, 106, 106);
-    border: 1px solid rgb(250, 106, 106);
+    outline: 1px solid var(--invalid);
+    border: 1px solid var(--invalid);
+}
+
+input:valid {
+    outline: 1px solid var(--valid);
+    border: 1px solid var(--valid);
+}
+
+input:optional {
+    outline: 1px solid var(--neutral);
+    border: 1px solid var(--neutral);
+}
+
+.error {
+    font: inherit;
+    color: white;
+    margin-top: 2px;
+}
+
+.error.active {
+    font: inherit;
+    color: var(--invalid);
+    margin-top: 2px;
+}
+
+button {
+    height: 3em;
+    width: 15em;
+    margin-bottom: 2em;
+    border-radius: 0.5em;
+    border: none;
+    box-shadow: 3px 3px 3px rgb(150,150,150);
+    background-color: rgb(63, 99, 46);
+    color: white;
+    font-size: 1em;
+}
+
+.bottom a {
+    text-decoration: none;
+    color: var(--neutral);
 }

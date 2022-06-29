@@ -53,6 +53,8 @@ img {
     left: 50%;
     transform: translate(-50%,50%);
     color: white;
+    width: 100%;
+    text-align: center;
 }
 
 .img-container a {
@@ -90,13 +92,30 @@ img {
 
 form {
     display: grid;
-    grid-template-columns: repeat(2,auto);
-    row-gap: 10%;
-    column-gap: 10%;
+    grid-template-columns: repeat(2,40%);
+    grid-auto-rows: auto;
+    row-gap: 30px;
+    column-gap: 10px;
     font-size: 0.8em;
     color: rgb(85, 85, 85);
 }
 
 input:focus {
-    box-shadow: 3px 3px 3px rgb(200,200,200);
+    box-shadow: 3px 3px 3px rgb(150, 150, 150);
+    border-radius: 3px;
+    outline: 1px solid rgb(129, 156, 192);
+}
+
+input {
+    height: auto;
+    width: 80%;
+    margin-top: 2px;
+    border: 1px solid rgb(129, 156, 192);
+    padding: 10px 0 10px 15px;
+    font-size: 1.5em;
+}
+
+input:invalid {
+    outline: 1px solid rgb(250, 106, 106);
+    border: 1px solid rgb(250, 106, 106);
 }
